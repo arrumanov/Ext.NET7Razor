@@ -1,0 +1,39 @@
+﻿@page  "{handler?}"
+@model Company.WebApplication1.Pages.IndexModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ext.NET web application</title>
+</head>
+<body>
+<ext-panel
+    title="Sample Panel"
+    width="500"
+    height="350"
+    layout="Fit"
+    bodyPadding="10"
+    html="Click button to call server-side [Direct] handler">
+    <buttons>
+        <ext-button text="Click Me!">
+            <directevents>
+                <click pageHandler="ButtonClick" method="POST" />
+            </directevents>
+        </ext-button>
+    </buttons>
+</ext-panel>
+
+<style>
+    .x-btn {
+        background-color: red;
+    }
+</style>
+
+</body>
+</html>
